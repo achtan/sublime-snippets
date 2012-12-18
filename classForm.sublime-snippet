@@ -1,0 +1,45 @@
+<snippet>
+	<content><![CDATA[
+${2:namespace }
+
+use Nette;
+${3:use }
+
+/**
+ * ${1:Form} class
+ *
+ * @author $TM_FULLNAME
+ */
+class ${1} extends ${4:BaseForm} {
+
+	public function __construct()
+	{
+		parent::__construct();
+	}
+
+
+	public function buildForm()
+	{
+		${5}
+
+		\$this->addSubmit('send', 'Poslat');
+		
+		\$this->onSuccess[] = callback(\$this, 'process');
+	}
+
+	public function setDefaultsValues() 
+	{
+	}
+
+	public function process(${1} \$form)
+	{
+		\$values = \$form->getValues();
+	}
+
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>cform</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.php</scope>
+</snippet>

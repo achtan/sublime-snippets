@@ -1,0 +1,23 @@
+<snippet>
+	<content><![CDATA[
+
+protected function createComponent${1:Name}Form()
+{
+	\$form = \$this->${2}FormFactory->create(${3});
+	\$form->buildForm();
+	\$form->setDefaultsValues();
+
+	\$form->onSuccess[] = function (\$form) { 
+		if (\$form->valid) \$form->presenter->redirect('this'); 
+	};
+
+	return \$form;
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>nette-frm</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.php</scope>
+	<!-- Optional: Description to show in the menu -->
+	<description>Nette form component factory</description>
+</snippet>

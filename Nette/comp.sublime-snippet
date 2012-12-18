@@ -1,0 +1,17 @@
+<snippet>
+	<content><![CDATA[
+
+protected function createComponent${1:Name}()
+{
+	\$comp = \$this->${2}ControlFactory->create(${3});
+
+	return \$comp;
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>nette-comp</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.php</scope>
+	<!-- Optional: Description to show in the menu -->
+	<description>Nette component factory</description>
+</snippet>

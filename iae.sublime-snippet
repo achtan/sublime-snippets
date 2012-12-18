@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+throw new \Nette\InvalidArgumentException('Argument does not match with the expected value');
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>iae</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.php</scope>
+</snippet>
